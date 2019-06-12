@@ -1,8 +1,9 @@
+
 import React from "react";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs"
+import Article from './Article'
 
 const DataTabs = ({data}) => {
-    // console.log("data>>", data)
 
             return (
                 <Tabs>
@@ -13,13 +14,18 @@ const DataTabs = ({data}) => {
                     </TabList>
                     <TabPanels>
                         {data.map((tab, index) => (
-                            <TabPanel key={index}>{index}{tab.webTitle}</TabPanel>
+                            
+                            <TabPanel key={index}>
+                                <ol>
+                                {tab.articles.map((articleData, articleIndex) => (
+                                    <Article articleData={articleData} key={articleIndex} />
+                                ))}
+                                    </ol>
+                            </TabPanel>
                         ))}
                     </TabPanels>
                 </Tabs>
             );
 }
 
-
 export default DataTabs;
-
