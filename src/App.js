@@ -23,14 +23,14 @@ class App extends Component {
         let apiRequest2 = fetch('https://content.guardianapis.com/sections?q=football&api-key=test').then(function (response) {
             return response.json()
         });
-        let combinedData = { "apiRequest1": {}, "apiRequest2": {} }
+        let combinedData = []
 
         Promise.all([apiRequest1, apiRequest2])
                 .then(function (values) {
-                    combinedData["apiRequest1"] = values[0];
-                    combinedData["apiRequest2"] = values[1];
+                    combinedData[0] = values[0].response;
+                    combinedData[1] = values[1].response;
 
-                    console.log("combinedData1", combinedData.apiRequest1.response)
+                    console.log("combinedData1", combinedData[0])
                     console.log("combinedData", combinedData)
                     return combinedData
                 })
@@ -43,7 +43,7 @@ class App extends Component {
         console.log("tabdataRes", tabData)
         
         if (!tabData.apiRequest1) {
-            return <p>No data yet</p>
+            return <p>No data yet </p>
         }
 
         return (
