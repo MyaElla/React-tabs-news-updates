@@ -1,11 +1,5 @@
-// import 'whatwg-fetch';
-// import env from 'env'
-
-
 // import api from './api'
 // import env from '../../env'
-
-
 
 
 
@@ -70,19 +64,6 @@ export const defaultHeaders = () => ({
     // Auth: env.apiKey
 })
 
-// https://content.guardianapis.com/sections?q=uk-news&api-key=test
-
-//  let myRequest = fetch(url)
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log('Request succeeded with JSON response', data)
-//     })
-//     .catch(error => {
-//         console.log('Request failed', error)
-//     })
-
-// export default myRequest
-
 
 export default function request() {
 
@@ -104,55 +85,3 @@ export default function request() {
 
    
 }
-
-
-// store urls to fetch in an array
-
-
-
-    //     Promise.all([
-    //         fetch('https://content.guardianapis.com/sections?q=travel&api-key=test').then(response => response.json()),
-    //         fetch('https://content.guardianapis.com/sections?q=football&api-key=test').then(response => response.json())
-    //     ])
-
-    //     .then(data => this.setState({ tabData: data }))
-    //     // .then(data => {
-    //     //         const response1 = data[0]
-    //     //         const response2 = data[1]
-
-    //     // })   
-
-    //         .catch((err) => {
-    //             console.log(err);
-    //         });
-
-
-
-
-// const urls = [
-//     'https://content.guardianapis.com/sections?q=travel&api-key=test',
-//     'https://content.guardianapis.com/sections?q=football&api-key=test'
-// ];
-
-// // use map() to perform a fetch and handle the response for each url
-// Promise.all(urls.map(url =>
-//     fetch(url)
-//         .then(parseJSON)
-// ))
-//     .then(data => this.setState({ tabData: data }))
-
-
-
-// const sections = Object.keys(api.map(key => api[key]))
-// const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-// let baseUrl = `https://content.guardianapis.com/${sections}?api-key=${API_KEY}`
-// return fetch(baseUrl)
-//     // .then(response => {console.log(response)})
-//     .then(response => response.json())
-//     // .then(data => {
-//     //   console.log('Request succeeded with JSON response', data.response.results)
-//     // })
-//     .then(data => this.setState({ tabData: data.response.results }))
-//     .catch(error => {
-//         console.log('Request failed', error)
-//     })

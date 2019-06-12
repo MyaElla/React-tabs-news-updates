@@ -12,8 +12,9 @@ class App extends Component {
     }
 
     fetchSectionContents(sectionName, sectionCode) {
+        const API_KEY = `${process.env.REACT_APP_Content_API_KEY}`;
         return (
-            fetch(`https://content.guardianapis.com/search?section=${sectionCode}&api-key=test`)
+            fetch(`https://content.guardianapis.com/search?section=${sectionCode}&api-key=${API_KEY}`)
                 .then(response => response.json())
                 .then(x => x.response.results)
                 .then(articles => ({
