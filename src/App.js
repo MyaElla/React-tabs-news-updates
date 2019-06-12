@@ -16,19 +16,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        // Promise.all([
-        //     fetch('https://content.guardianapis.com/sections?q=travel&api-key=test'),
-        //     fetch('https://content.guardianapis.com/sections?q=football&api-key=test')
-        // ])
-
-        //     .then(([res1, res2]) => {
-        //         return Promise.all([res1.json(), res2.json()])
-        //     })
-        //     .then(([res1, res2]) => 
-        //         // set state in here
-                    // const {results} = response.data
-        //          this.setState({ tabData: results })
-        //     );
     
         let apiRequest1 = fetch('https://content.guardianapis.com/sections?q=travel&api-key=test').then(function (response) {
             return response.json()
@@ -53,9 +40,12 @@ class App extends Component {
 
     render() {
         const { tabData } = this.state
-        console.log("tabdataRes", tabData.apiRequest1)
+        console.log("tabdataRes", tabData)
         
-     
+        if (!tabData.apiRequest1) {
+            return <p>No data yet</p>
+        }
+
         return (
             <div className="App">
                 <p>{tabData.response}</p>
@@ -72,6 +62,7 @@ class App extends Component {
             </div>
         );
     }
+
 }
 
 export default App;
