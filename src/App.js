@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-// import { BrowserRouter, Route, Link } from "react-router-dom";
-// import { Tabs, TabList, Tab } from "@reach/tabs"
-// import Child from './components/Child'
-// import DataTabs from './components/Tabs'
-// import {request} from './utils/request'
+import DataTabs from './components/Tabs'
 
 
 class App extends Component {
@@ -27,8 +23,8 @@ class App extends Component {
 
         Promise.all([apiRequest1, apiRequest2])
                 .then(function (values) {
-                    combinedData[0] = values[0].response;
-                    combinedData[1] = values[1].response;
+                    combinedData[0] = values[0].response.results;
+                    combinedData[1] = values[1].response.results;
 
                     console.log("combinedData1", combinedData[0])
                     console.log("combinedData", combinedData)
@@ -42,23 +38,15 @@ class App extends Component {
         const { tabData } = this.state
         console.log("tabdataRes", tabData)
         
-        if (!tabData.apiRequest1) {
+        if (!tabData.length) {
             return <p>No data yet </p>
         }
 
         return (
             <div className="App">
                 <p>{tabData.response}</p>
-                {/* <Tabs>
-                    <TabList>
-                        <Tab>Travel</Tab>
-                        <Tab>UK news</Tab>
-                        <Tab>Football</Tab>
-                    </TabList>
-                    <Child />
-                </Tabs> */}
 
-                {/* <DataTabs data={this.state.tabData} /> */}
+                <DataTabs data={this.state.tabData} />
             </div>
         );
     }
