@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DataTabs from './components/Tabs'
+import DataTabs from './components/DataTabs'
 
 
 class App extends Component {
