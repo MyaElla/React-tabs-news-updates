@@ -1,14 +1,14 @@
 using https://ui.reach.tech/tabs
 
-to do:
+## TO DO
 
-tests with cypress?
-prep for production ( build, minify..?)
-style article links 
-style tabs
-try tabs created from scratch
-add activetab prop/ onchange
-enforce newest & last 5-10 articles (slice?)
+### - complete setting up request file ( move fetchSectionContents() inside; update headers for 403 on [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) )
+### - try test with Cypress
+### - prep for production ( build, minify..?) > When you’re [ready to deploy to production](https://facebook.github.io/create-react-app/docs/production-build) , create a minified bundle with 'npm run build'. 
+### - style tabs
+### - style article links 
+### - try tabs created from scratch (add activetab prop/ onchange?)
+### - enforce newest & last 5-10 articles (slice?)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -38,7 +38,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+>> See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
 ### Deployment
