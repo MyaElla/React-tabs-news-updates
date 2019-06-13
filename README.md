@@ -1,3 +1,16 @@
+using https://ui.reach.tech/tabs
+
+to do:
+
+tests with cypress?
+prep for production ( build, minify..?)
+style article links 
+style tabs
+try tabs created from scratch
+add activetab prop/ onchange
+enforce newest & last 5-10 articles (slice?)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
